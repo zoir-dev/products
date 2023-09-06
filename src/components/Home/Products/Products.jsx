@@ -35,7 +35,7 @@ const Products = ({
   return (
     <div className="products_div">
       <h1>Products</h1>
-      {categories.length && (
+      {categories.length ? (
         <div className="categories">
           <button
             onClick={() => setCategory("")}
@@ -53,6 +53,8 @@ const Products = ({
             </button>
           ))}
         </div>
+      ) : (
+        ""
       )}
       {!loading ? (
         <div className="products">
