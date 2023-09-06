@@ -1,0 +1,97 @@
+.drawer {
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -400px; /* Change left to right */
+  transition: right 0.3s ease-in-out; /* Change left to right */
+  z-index: 1;
+  background-color: #fff;
+  color: black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08); /* Large box shadow */
+}
+.drawer .title{
+  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title h4{
+  font-size: 20px;
+}
+.open {
+  right: 0 !important; /* Change left to right */
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0 ; /* Change left to right */
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+}
+ .backdrop_open{
+  backdrop-filter: blur(5px) !important;
+  pointer-events: unset; /* Allow clicks to pass through when the drawer is closed */
+  opacity: 1;
+  z-index: 1;
+}
+
+.toggle-button {
+  color: #38B2AC;
+  font-size: 40px;
+  background-color: transparent;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.content {
+  padding: 20px;
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.basket_products p{
+  text-align: center;
+}
+.basket_products{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 30px;
+}
+.basket_products .basket_product{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: black;
+}
+
+.basket_product img{
+  width: 50px;
+  filter: none !important;
+  background-blend-mode: color-burn;
+}
+.basket_product p{
+  color: black !important;
+}
+.basket_product div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.basket_product div button{
+  color: #38B2AC;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}

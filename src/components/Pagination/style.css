@@ -1,0 +1,48 @@
+/* ChakraPagination.css */
+
+/* Style for the pagination container */
+.chakra-pagination-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 5px;
+  width: max-content;
+  margin: 0 auto;
+}
+
+/* Style for the left and right navigation buttons */
+.chakra-pagination-button {
+  margin-right: 2px;
+  background-color: #38B2AC; /* Change this to your desired button color */
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+.active{
+  background-color: #38B2AC !important;
+  color: white;
+}
+
+/* Style for the button icons */
+.chakra-pagination-icon {
+  font-size: 16px;
+   color: white;
+}
+
+/* Style for the page number buttons */
+.chakra-pagination-page {
+  margin: 0 1px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #38B2AC;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+/* Style for the disabled dots */
+.chakra-pagination-dots {
+  cursor: not-allowed;
+  margin: 0 2px;
+}

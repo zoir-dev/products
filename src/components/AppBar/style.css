@@ -1,0 +1,31 @@
+.appbar{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #38B2AC;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.appbar .basket{
+    position: relative;
+    cursor: pointer;
+}
+.appbar .basket span{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+
+}
+.appbar img{
+    width: 30px;
+    filter: brightness(0) invert(1);
+}
