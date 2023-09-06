@@ -35,23 +35,25 @@ const Products = ({
   return (
     <div className="products_div">
       <h1>Products</h1>
-      <div className="categories">
-        <button
-          onClick={() => setCategory("")}
-          className={category === "" ? "active" : ""}
-        >
-          All
-        </button>
-        {categories.map((c) => (
+      {categories.length && (
+        <div className="categories">
           <button
-            key={c}
-            onClick={() => setCategory(c)}
-            className={category === c ? "active" : ""}
+            onClick={() => setCategory("")}
+            className={category === "" ? "active" : ""}
           >
-            {c}
+            All
           </button>
-        ))}
-      </div>
+          {categories.map((c) => (
+            <button
+              key={c}
+              onClick={() => setCategory(c)}
+              className={category === c ? "active" : ""}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
+      )}
       {!loading ? (
         <div className="products">
           {products.map((p) => (
